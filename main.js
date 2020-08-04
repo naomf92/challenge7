@@ -3,7 +3,6 @@
  alert('You got 5 guesses. Guess 1 to 5');
 
 // 答えの数値を2で用意
- let answer = 2;
 // promptで'What do you guess?'と言うメッセージとともに、記入欄を表示させる
 let message = prompt('What do you guess?');
 
@@ -11,28 +10,18 @@ let message = prompt('What do you guess?');
 // ヒント１：if文とも組み合わせて、推測が当たった場合はalertで'Good job! See what happens next :)'を表示。当たったらゲーム終了にする。
 // ヒント２：外れたらpromptで'Ops! Maybe, another try?'のメッセージとともに記入欄を表示。
 
-// for (let i = 1; i<= 5; i++) {
-//      if (i === 2){
-//         alert('Good job! See what happens next :)');
-//         console.log(i);
-//         break;
-//      } else {
-//         message = prompt('Ops! Maybe, another try?');  
-//      }
-// }
+let array = [1,3,4,5];
+const answer = [2];
 
-let array =[1,2,3,4,5];
-
-for (let item of array) {
-    if ( == ){
+for (let i = 0; i<=4 ; i++) {
+    if (i=== answer[i]){
        alert('Good job! See what happens next :)');
-       console.log(item);
+       console.log();
        break;
     } else {
        message = prompt('Ops! Maybe, another try?');
-    }
+      }
 }
-
 
 /*   マイルストーン2   */
 // for文で完成したら、for文箇所をコメントアウトし、while文で書き換えてみましょう。
