@@ -13,15 +13,26 @@ let message = prompt('What do you guess?');
 let array = [1,3,4,5];
 const answer = [2];
 
-for (let i = 0; i<=4 ; i++) {
-    if (i=== answer[i]){
-       alert('Good job! See what happens next :)');
-       console.log();
-       break;
-    } else {
-       message = prompt('Ops! Maybe, another try?');
-      }
-}
+// for (let i = 0; i<=4; i++) {
+//     if (message == 2){
+//        alert('Good job! See what happens next :)');//答えの2と変数messageが一致すれば「正解」の状態としてみなせそうですね。
+//        break;
+//    } else {
+//        message = prompt('Ops! Maybe, another try?');
+//    }
+//    console.log(message);
+// }
 
 /*   マイルストーン2   */
 // for文で完成したら、for文箇所をコメントアウトし、while文で書き換えてみましょう。
+let i = 0;
+while (i<=4) {
+   i++;
+   if (message == 2){
+      alert('Good job! See what happens next :)');
+      break;
+   } else {
+      message = prompt('Ops! Maybe, another try?');
+   }
+   console.log(message);
+}
