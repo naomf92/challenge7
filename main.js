@@ -18,16 +18,27 @@ const answer = [2];
 let array = [1,3,4,5];
 
 for (let i = 0; i<=4; i++) {
-    if (message == answer){// 答えの2を入れている値を上記で宣言して用意していますね。それを使いましょう
-       alert('Good job! See what happens next :)');//答えの2と変数messageが一致すれば「正解」の状態としてみなせそうですね。
+    //else ifの箇所は、実行されずに素通りしている可能性があるので、ここでarray[i]の値を検証します
+    // 正解以外、どの数値をブラウザで入れても1, 3, 4, 5が出てきます
+    // 配列arrayの値の中身が順番につずつ出てきていることがわかります
+    // 1つ数字をブラウザで入力するたびに、配列arrayの先頭の値1つずつしか対象にしてくれないようです。
+    // array[i]とすると、思うように動いてくれないみたいなので、array[指定インデックス番号]で書くと良さそうです
+    // console.log(array[i]);
+    if (message == answer){
+       alert('Good job! See what happens next :)');
        break;
-   } else if (message == array[i]){
+   } else if (message == array[0]){
        message = prompt('Ops! Maybe, another try?');
+   } else if (message == array[1]){
+       message = prompt('Ops! Maybe, another try?');
+   } else if (message == array[2]){
+       message = prompt('Ops! Maybe, another try?');
+   } else if (message ==array[3]){
+    message = prompt('Ops! Maybe, another try?');
    } else {
       message = prompt('Pick a number from 1 to 5');
    }
    console.log(message);
-   
 }
 
 /*   マイルストーン2   */
