@@ -1,6 +1,6 @@
-// const img = document.getElementsBy('');
-// img.innerHTML= 
-// console.log(img);
+const img = document.getElementById('img');
+// img.innerHTML = 
+console.log(img);
 
 /*   マイルストーン１   */
 // alertで'You got 5 guesses. Guess 1 to 5'と言うメッセージを表示させ、１から５までの数値を当てるよう指示する。
@@ -27,18 +27,17 @@ for (let i = 0; i<=4; i++) {
     if (message == answer){
        alert('Good job! See what happens next :)');
        break;
-   } else if (message == array[0]){
+    } else if (
+       message == array[0] ||
+       message == array[1] ||
+       message == array[2] ||
+       message == array[3] ||
+    ) {
        message = prompt('Ops! Maybe, another try?');
-   } else if (message == array[1]){
-       message = prompt('Ops! Maybe, another try?');
-   } else if (message == array[2]){
-       message = prompt('Ops! Maybe, another try?');
-   } else if (message ==array[3]){
-    message = prompt('Ops! Maybe, another try?');
-   } else {
-      message = prompt('Pick a number from 1 to 5');
-   }
-   console.log(message);
+
+    } else {
+       message = prompt('Pick a number from 1 to 5');
+    }
 }
 
 /*   マイルストーン2   */
